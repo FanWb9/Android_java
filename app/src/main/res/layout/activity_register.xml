@@ -1,10 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
     tools:context=".RegisterActivity">
-<!-- ana -->
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center_vertical|start"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EsemkaBlogger"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <!-- Space -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Image -->
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/ImgRegis"
+            android:src="@drawable/digital_contract"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtRegis"
+            android:text="Register"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_gravity="start"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDesc"
+            android:text="Create Your Account Now"
+            android:layout_gravity="start"
+            android:textSize="15sp"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- First Name & Last Name (Sampingan) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/etFirst"
+                android:hint="First Name"
+                android:minHeight="50dp"
+                android:padding="10dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/etLast"
+                android:hint="Last Name"
+                android:minHeight="50dp"
+                android:padding="10dp"
+                android:background="@android:color/darker_gray"/>
+        </LinearLayout>
+
+        <!-- Date of Birth -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etDob"
+            android:hint="Date of Birth (DD/MM/YYYY)"
+            android:minHeight="50dp"
+            android:padding="10dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="20dp"
+            android:inputType="date"/>
+
+        <!-- Username -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etUsername"
+            android:hint="Username"
+            android:minHeight="50dp"
+            android:padding="10dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Password -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etPassword"
+            android:hint="Password"
+            android:minHeight="50dp"
+            android:padding="10dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="20dp"
+            android:inputType="textPassword"/>
+
+        <!-- Confirm Password -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etConfirmPassword"
+            android:hint="Confirm Password"
+            android:minHeight="50dp"
+            android:padding="10dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="10dp"
+            android:inputType="textPassword"/>
+
+        <!-- Show Password -->
+        <CheckBox
+            android:id="@+id/chkShowPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Password"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Register Button -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRegister"
+            android:text="Register"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+    </LinearLayout>
+</LinearLayout>
